@@ -1,0 +1,27 @@
+[default.probe]
+protocol = "Swd"
+speed = 20000
+
+[default.flashing]
+enabled = true
+
+[default.reset]
+enabled = true
+halt_afterwards = true
+
+[default.general]
+chip = "RP2040"
+log_level = "WARN"
+# RP2040 does not support connect_under_reset
+connect_under_reset = false
+
+[default.rtt]
+enabled = false
+timeout = 3000
+show_timestamps = true
+log_enabled = false
+log_path = "./logs"
+
+[default.gdb]
+enabled = true
+gdb_connection_string = "127.0.0.1:1337"
